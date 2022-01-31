@@ -2,6 +2,7 @@ package com.test.movielist.config;
 
 import com.test.movielist.domain.orm.Movie;
 import com.test.movielist.domain.repository.MovieRepository;
+import com.test.movielist.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,9 @@ public class ImportDataConfig {
 
     @Autowired
     private MovieRepository movieRepository;
+
+    @Autowired
+    private MovieService movieService;
 
     @Bean
     private void importCSV() {
@@ -55,6 +59,7 @@ public class ImportDataConfig {
                 numberLine++;
 
             }
+            movieService.findProducerWonIntervals();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
