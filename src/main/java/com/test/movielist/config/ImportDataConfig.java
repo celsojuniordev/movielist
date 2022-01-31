@@ -48,7 +48,7 @@ public class ImportDataConfig {
 
                         movieRepository.save(movie);
                     } else {
-                        log.warn("[IMPORT-ERROR] Formato invalido - Linha #" + numberLine + " - Valor: " + line);
+                        log.warn("[IMPORT-ERROR] Invalid format - Line #" + numberLine + " - Value: " + line);
                     }
                 }
 
