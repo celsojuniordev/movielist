@@ -20,9 +20,6 @@ public class ImportDataConfig {
     @Autowired
     private MovieRepository movieRepository;
 
-    @Autowired
-    private MovieService movieService;
-
     @Bean
     private void importCSV() {
 
@@ -59,10 +56,13 @@ public class ImportDataConfig {
                 numberLine++;
 
             }
-            movieService.findProducerWonIntervals();
         } catch (FileNotFoundException e) {
+            log.warn("[IMPORT-ERROR] File not found - " + e.getMessage());
+
             e.printStackTrace();
         } catch (IOException e) {
+            log.warn("[IMPORT-ERROR] IO Error - " + e.getMessage());
+
             e.printStackTrace();
         }
     }
