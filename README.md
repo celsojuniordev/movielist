@@ -3,7 +3,7 @@
 O sistema possibilita a leitura da lista de indicados e vencedores
 da categoria Pior Filme do Golden Raspberry Awards.
 
-####Endpoint 
+#### Endpoint 
 
 ``http://localhost:8080/api/movies/producerWonIntervals``
 
