@@ -8,7 +8,7 @@ da categoria Pior Filme do Golden Raspberry Awards.
 ``http://localhost:8080/api/movies/producerWonIntervals``
 
 
-###---
+### ---
 Sistema desenvolvido em Java com gerenciador de dependencias Gradle, utilizando Spring Boot e H2
 
 Para saber mais sobre as tecnologias
