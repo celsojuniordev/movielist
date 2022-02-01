@@ -43,8 +43,8 @@ public class ImportDataConfig {
                         Movie movie = new Movie();
                         movie.setYear(lineData[0] != null ? Integer.parseInt(lineData[0]) : null);
                         movie.setTitle(lineData[1] != null ? lineData[1] : null);
-                        movie.setProducer(lineData[2] != null ? lineData[2] : null);
-                        movie.setStudio(lineData[3] != null ? lineData[3] : null);
+                        movie.setStudio(lineData[2] != null ? lineData[2] : null);
+                        movie.setProducer(lineData[3] != null ? lineData[3] : null);
                         movie.setWinner(lineData[4] != null ? lineData[4].toString().equals("yes") : null);
 
                         movieRepository.save(movie);
